@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -15,16 +16,20 @@
     <div class="main">
       <!-- Header section -->
       <header>
-        <div class="logo"><span>Web</span>Studio</div>
-        <nav class="main-menu">
-          <ul>
-            <li class="selected"><a href="index.html">Студия</a></li>
-            <li><a href="portfolio.html">Портфолио</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-        </nav>
-        <a class="email" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <a class="phone" href="tel:+380961111111">+38&nbsp;096&nbsp;111&nbsp;11&nbsp;11</a>
+        <div class="logo-menu">
+          <div class="logo"><span>Web</span>Studio</div>
+          <nav class="main-menu">
+            <ul>
+              <li class="selected"><a href="index.html">Студия</a></li>
+              <li><a href="portfolio.html">Портфолио</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="address">
+          <a class="email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <a class="phone" href="tel:+380961111111">+38&nbsp;096&nbsp;111&nbsp;11&nbsp;11</a>
+        </div>
       </header>
       <!-- Main section -->
       <main>
@@ -103,11 +108,17 @@
       <footer>
         <div class="logo"><span>Web</span>Studio</div>
         <address>
-          <p>г. Киев, пр-т Леси Украинки, 26</p>
+          <div>
+            <p>г. Киев, пр-т Леси Украинки, 26</p>
+          </div>
+          <div>
+            <a class="email" href="mailto:info@example.com">info@example.com</a>
+          </div>
+          <div>
+            <a href="tel:+380991111111">+38&nbsp;099&nbsp;111&nbsp;11&nbsp;11</a>
+          </div>
         </address>
-        <a href="mailto:info@example.com">info@example.com</a><br />
-        <a href="tel:+380991111111">+38&nbsp;099&nbsp;111&nbsp;11&nbsp;11</a>
-      </footer>
+    </footer>
     </div>
   </body>
 </html>

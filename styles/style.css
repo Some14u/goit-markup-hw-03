@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   background-color: #e5e5e5;
   --gray-bg: #2f303a;
@@ -39,7 +45,7 @@ header {
   font-family: Raleway;
   font-size: 26px;
   font-weight: 700;
-  line-height: 31px;
+  line-height: 1.2;
   letter-spacing: .03em;
   color: #000;
 }
@@ -48,19 +54,24 @@ header {
   color: var(--blue-c);
 }
 
-.main-menu {
-  margin-left: 93px;
-  margin-right: 271px;
+.logo-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.main-menu li {
-  display: inline-block;
+
+.main-menu ul{
+  display: flex; 
+  margin-left: 93px;
+}
+.main-menu li:not(:last-child) {
   margin-right: 50px;
 }
 
 .main-menu li a {
   text-decoration: none;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1.143;
   letter-spacing: .02em;
   color: var(--text-c-1);
 }
@@ -77,15 +88,19 @@ header {
   color: var(--blue-c);
 }
 
-.email {
+header .email {
   margin-right: 50px;
 }
 
-.email,
-.phone {
+header .address {
+  display: flex;
+}
+
+header .email,
+header .phone {
   text-decoration: none;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1.143;
   letter-spacing: .02em;
   color: var(--text-c-2);
 }
@@ -113,7 +128,7 @@ header {
 .order-section > h1 {
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -126,7 +141,7 @@ header {
   margin-top: 30px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
   letter-spacing: .06em;
   color: #fff;
   background: var(--blue-c);
@@ -151,14 +166,14 @@ header {
 .feature-description > h3 {
   margin-bottom: 10px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.143;
   letter-spacing: .03em;
   text-transform: uppercase;
   color: var(--text-c-1);
 }
 
 .feature-description > p {
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: .03em;
   color: var(--text-c-2);
 }
@@ -186,7 +201,7 @@ h2 { /* This applies to about-us-section and team-section */
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.167;
   text-align: center;
   letter-spacing: .03em;
   color: var(--text-c-1);
@@ -229,7 +244,7 @@ h2 { /* This applies to about-us-section and team-section */
 .team-member p {
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.188;
   text-align: center;
   letter-spacing: .03em;
   color: var(--text-c-1);
@@ -254,23 +269,32 @@ footer > .logo {
 }
 
 footer > address {
-  line-height: 24px;
   letter-spacing: .03em;
-  color: #fff;
+  line-height: 1.715;
   margin-top: 20px;
+  color: #fff;
 }
 
-footer > a {
+footer > address > div { /* Эти блоки нужны из-за косяка в эскизе */
+  height: 1.5em; /* Указано так, чтоб масштабировалось, если изменят размер шрифта */
+  margin-bottom: 9px;
+}
+footer > address > div:last-child {
+  margin-bottom: 0;
+}
+
+footer > address22 > a:last-child {
+  position: relative; /* Тут пришлось применить грязные хаки из-за косяка в макете */
+  line-height: 1.5em;
+  top: .105em;
+}
+
+footer a {
+  display: inline;
   text-decoration: none;
   font-style: normal;
-  line-height: 33px;
   letter-spacing: .03em;
   color: rgba(255,255,255,.6);
-}
-
-footer > a:hover,
-footer > a:focus {
-  color: var(--blue-c);
 }
 
 
@@ -302,7 +326,7 @@ footer > a:focus {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-c-1);
