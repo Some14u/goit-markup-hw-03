@@ -17,7 +17,7 @@
 }
 
 .container {
-  width: 1200px; /* Почему в задании указано 1200? */
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -89,7 +89,7 @@ header .container {
 
 .logo {
   text-decoration: none;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
@@ -212,14 +212,6 @@ header .phone {
 .feature {
   min-width: 270px;
   flex-basis: calc(100% / var(--rows) - var(--spacer));
-}
-
-.feature > div {
-  padding: 25px 0px;
-  margin-bottom: var(--spacer);
-  text-align: center;
-  border-radius: 4px;
-  background-color: var(--light-gray);
 }
 
 .feature > h3 {
