@@ -299,6 +299,7 @@ footer {
 }
 
 footer > .logo {
+  display: block;
   color: var(--white-c);
 }
 
@@ -317,7 +318,7 @@ footer > address li:last-child {
   margin-bottom: 0;
 }
 
-footer a {
+footer ul a {
   display: inline;
   text-decoration: none;
   font-style: normal;
