@@ -11,9 +11,34 @@
   --light-gray2: #afb1b8;
   --blue-c: #2196f3;
   --blue-c2: #188ce8;
+  --white-c: #fff;
+  --black-c: #000;
+  --border-c1: #ececec;
+  --border-c2: #eee;
   --text-c-1: #212121;
   --text-c-2: #757575;
   --spacer: 30px;
+}
+
+body {
+  width: 1600px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .03em;
+  background-color: var(--white-c);
+}
+
+button[type="button"] {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
 .container {
@@ -51,32 +76,11 @@
   margin-top: var(--spacer);
 }
 
-body {
-  width: 1600px;
-  margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  background-color: #fff;
-}
-
-
-button[type="button"] {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-}
-
 
 /* Header */
 
 header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-c1);
   height: 80px;
 }
 
@@ -94,7 +98,7 @@ header .container {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: .03em;
-  color: #000;
+  color: var(--black-c);
 }
 
 .logo > span {
@@ -184,7 +188,7 @@ header .phone {
   text-align: center;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white-c);
 }
 
 .order-section .order {
@@ -193,7 +197,7 @@ header .phone {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: .06em;
-  color: #fff;
+  color: var(--white-c);
   background: var(--blue-c);
   box-shadow: 0px 4px 4px rgba(0,0,0,.15);
 }
@@ -252,7 +256,7 @@ h2 { /* Заголовок во всех секциях одинаковый, п
 }
 
 .team-member {
-  background: #fff;
+  background: var(--white-c);
   box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 1px 1px rgba(0,0,0,.14), 0px 2px 1px rgba(0,0,0,.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -295,14 +299,14 @@ footer {
 }
 
 footer > .logo {
-  color: #fff;
+  color: var(--white-c);
 }
 
 footer > address {
   letter-spacing: .03em;
   line-height: 1.715;
   margin-top: 20px;
-  color: #fff;
+  color: var(--white-c);
 }
 
 footer > address li { /* Эти блоки нужны из-за косяка в эскизе */
@@ -318,7 +322,8 @@ footer a {
   text-decoration: none;
   font-style: normal;
   letter-spacing: .03em;
-  color: rgba(255,255,255,.6);
+  color: var(--white-c);
+  opacity: 60%;
 }
 
 
@@ -350,7 +355,7 @@ footer a {
 
 .proj-filter button.selected {
   background-color: var(--blue-c);
-  color: #fff;
+  color: var(--white-c);
 }
 
 .proj-filter button.selected,
@@ -361,7 +366,7 @@ footer a {
 /* Single project */
 
 .project {
-  box-shadow:inset 0px 0px 0px 1px #eee; /* 1px border inside the box */
+  box-shadow:inset 0px 0px 0px 1px var(--border-c2); /* 1px border inside the box */
   cursor: pointer;
 }
 
