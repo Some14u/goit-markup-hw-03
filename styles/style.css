@@ -6,11 +6,12 @@
 
 :root {
   background-color: #e5e5e5;
+  --prima-c: #2196f3;
+  --prima-c2: #188ce8;
   --gray-bg: 47, 48, 58;
   --light-gray: #f5f4fa;
   --light-gray2: #afb1b8;
-  --blue-c: #2196f3;
-  --blue-c2: #188ce8;
+  --light-gray3: #eceaef;
   --white-c: #fff;
   --black-c: #000;
   --border-c1: #ececec;
@@ -23,9 +24,7 @@
 body {
   width: 1600px;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: .03em;
   background-color: var(--white-c);
@@ -76,12 +75,17 @@ button[type="button"] {
   margin-top: var(--spacer);
 }
 
+a {
+  text-decoration: none;
+}
+
 
 /* Header */
 
 header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--border-c1);
-  height: 80px;
 }
 
 header .container {
@@ -92,18 +96,17 @@ header .container {
 }
 
 .logo {
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.192em;
   letter-spacing: .03em;
   color: var(--black-c);
 }
 
 .logo > span {
   display: inline-block;
-  color: var(--blue-c);
+  color: var(--prima-c);
 }
 
 header .logo {
@@ -116,7 +119,6 @@ header .logo {
 
 .main-menu li a {
   margin-right: 50px;
-  text-decoration: none;
   font-weight: 500;
   line-height: 1.143;
   letter-spacing: .02em;
@@ -125,14 +127,13 @@ header .logo {
 
 .main-menu li a:hover,
 .main-menu li a:focus {
-  color: var(--blue-c);
+  color: var(--prima-c);
 }
 
 .main-menu li.selected a {
   pointer-events: none;
   cursor: default;
-  text-decoration: none;
-  color: var(--blue-c);
+  color: var(--prima-c);
 }
 
 header .address {
@@ -140,44 +141,39 @@ header .address {
   display: flex;
 }
 
-header .address a {
-  display: flex;
-  align-items: center;
+header .address svg {
+  margin-right: 10px;
 }
 
 header .email {
-  margin-right: 50px;
+  margin-right: var(--spacer);
 }
 
-header .email,
-header .phone {
-  text-decoration: none;
+header .address a {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.143;
   letter-spacing: .02em;
   color: var(--text-c-2);
 }
 
-.email:hover,
-.phone:hover,
-.email:focus,
-.phone:focus {
-    color: var(--blue-c);
+.address a:hover, /* И для header, и для footer */
+.address a:focus {
+  opacity: 1;
+  color: var(--prima-c);
 }
-
 
 /* Order */
 
 .order-section {
-  background-color: rgb(var(--gray-bg));
-}
-
-.order-section > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content:center;
   padding: 200px 0;
+
+  background-color: rgb(var(--gray-bg));
 }
 
 .order-section h1 {
@@ -198,12 +194,12 @@ header .phone {
   line-height: 1.88;
   letter-spacing: .06em;
   color: var(--white-c);
-  background: var(--blue-c);
+  background: var(--prima-c);
   box-shadow: 0px 4px 4px rgba(0,0,0,.15);
 }
 
 .order-section .order:hover {
-  background: var(--blue-c2);
+  background: var(--prima-c2);
 }
 
 /* About us */
@@ -218,7 +214,7 @@ header .phone {
   flex-basis: calc(100% / var(--rows) - var(--spacer));
 }
 
-.feature > h3 {
+.feature > h2 {
   margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.143;
@@ -233,7 +229,7 @@ header .phone {
   color: var(--text-c-2);
 }
 
-h2 { /* Заголовок во всех секциях одинаковый, поэтому без селектора */
+h1 { /* Заголовок во всех секциях одинаковый, поэтому без селектора */
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -256,6 +252,7 @@ h2 { /* Заголовок во всех секциях одинаковый, п
 }
 
 .team-member {
+  width: 270px;
   background: var(--white-c);
   box-shadow: 0px 1px 3px rgba(0,0,0,.12), 0px 1px 1px rgba(0,0,0,.14), 0px 2px 1px rgba(0,0,0,.2);
   border-radius: 0px 0px 4px 4px;
@@ -276,7 +273,7 @@ h2 { /* Заголовок во всех секциях одинаковый, п
   color: var(--text-c-1);
 }
 
-.team-member-info h3 {
+.team-member-info h2 {
   margin-bottom: 10px;
 }
 
@@ -318,10 +315,7 @@ footer > address li:last-child {
   margin-bottom: 0;
 }
 
-footer ul a {
-  display: inline;
-  text-decoration: none;
-  font-style: normal;
+footer > address a {
   letter-spacing: .03em;
   color: var(--white-c);
   opacity: 60%;
@@ -353,22 +347,24 @@ footer ul a {
   background-color: var(--light-gray);
 }
 
-
-.proj-filter button.selected {
-  background-color: var(--blue-c);
-  color: var(--white-c);
+.proj-filter button:hover,
+.proj-filter button:focus {
+  background-color: var(--light-gray3);
+  box-shadow: 0px 3px 1px rgba(0,0,0,.1), 0px 1px 2px rgba(0,0,0,.08), 0px 2px 2px rgba(0,0,0,.12);
 }
 
-.proj-filter button.selected,
-.proj-filter button:hover {
+
+.proj-filter button.selected {
+  background-color: var(--prima-c);
   box-shadow: 0px 3px 1px rgba(0,0,0,.1), 0px 1px 2px rgba(0,0,0,.08), 0px 2px 2px rgba(0,0,0,.12);
+  color: var(--white-c);
 }
 
 /* Single project */
 
 .project {
+  width: 370px;
   box-shadow:inset 0px 0px 0px 1px var(--border-c2); /* 1px border inside the box */
-  cursor: pointer;
 }
 
 .project img {
@@ -379,7 +375,7 @@ footer ul a {
   box-shadow: 0px 1px 1px rgba(0,0,0,.12), 0px 4px 4px rgba(0,0,0,.06), 1px 4px 6px rgba(0,0,0,.16);
 }
 
-.project > div {
+.project div {
   padding: 20px 24px;
   font-weight: 700;
   font-size: 18px;
@@ -387,7 +383,7 @@ footer ul a {
   letter-spacing: 0.06em;
 }
 
-.project h3 {
+.project h2 {
   margin-bottom: 4px;
   color: var(--text-c-1);
 }
