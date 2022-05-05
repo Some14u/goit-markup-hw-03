@@ -193,12 +193,12 @@ header .address a {
   line-height: calc(30 / 16);
   letter-spacing: .06em;
   color: var(--white-c);
-  background: var(--prima-c);
+  background-color: var(--prima-c);
   box-shadow: 0px 4px 4px rgba(0,0,0,.15);
 }
 
 .order-section .order:hover {
-  background: var(--prima-c2);
+  background-color: var(--prima-c2);
 }
 
 
